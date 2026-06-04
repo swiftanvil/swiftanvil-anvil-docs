@@ -76,7 +76,7 @@ a later child once registry composition is stable.
 ## Requirements
 
 - Swift 6
-- macOS 13+
+- macOS 15+
 
 ## Dependencies
 
