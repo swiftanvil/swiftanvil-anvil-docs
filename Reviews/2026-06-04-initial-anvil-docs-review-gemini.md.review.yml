@@ -1,0 +1,11 @@
+schema_version: 1
+status: success
+agent: gemini
+builder: codex
+request: 'Reviews/2026-06-04-initial-anvil-docs-review-request.md'
+output: 'Reviews/2026-06-04-initial-anvil-docs-review-gemini.md'
+verdict: APPROVED
+started_at: '2026-06-04T03:42:07Z'
+finished_at: '2026-06-04T03:43:19Z'
+exit_code: 0
+home_strategy: login_home
