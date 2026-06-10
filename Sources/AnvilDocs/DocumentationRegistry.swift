@@ -9,8 +9,8 @@ public struct DocumentationRegistry: Codable, Equatable, Sendable {
     }
 }
 
-extension DocumentationRegistry {
-    public struct Document: Codable, Equatable, Sendable {
+public extension DocumentationRegistry {
+    struct Document: Codable, Equatable, Sendable {
         public var title: String?
         public var path: String
         public var sources: [String]

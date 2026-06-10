@@ -24,8 +24,8 @@ public struct DocumentationValidationReport: Equatable, Sendable {
     }
 }
 
-extension DocumentationValidationReport {
-    public struct MissingSource: Equatable, Sendable {
+public extension DocumentationValidationReport {
+    struct MissingSource: Equatable, Sendable {
         public var documentID: String
         public var source: String
 

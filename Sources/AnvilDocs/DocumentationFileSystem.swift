@@ -8,7 +8,7 @@ public protocol DocumentationFileSystem: Sendable {
 }
 
 public struct LocalDocumentationFileSystem: DocumentationFileSystem {
-    public init() {}
+    public init() { }
 
     public func fileExists(at url: URL) -> Bool {
         FileManager.default.fileExists(atPath: url.path)

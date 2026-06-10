@@ -40,7 +40,7 @@ struct DocumentationComposerTests {
                 title: "README",
                 path: "Composed/README.md",
                 sources: ["Fragments/intro.md", "Fragments/details.md"]
-            ),
+            )
         ])
 
         let result = try DocumentationComposer().compose(
@@ -65,7 +65,7 @@ struct DocumentationComposerTests {
 
         let registry = DocumentationRegistry(documents: [
             "b": .init(path: "Composed/B.md", sources: ["Fragments/b.md"]),
-            "a": .init(path: "Composed/A.md", sources: ["Fragments/a.md"]),
+            "a": .init(path: "Composed/A.md", sources: ["Fragments/a.md"])
         ])
 
         let results = try DocumentationComposer().composeAll(
@@ -84,7 +84,7 @@ struct DocumentationComposerTests {
         try root.write("A", to: sourceRoot.appending(path: "Fragments/a.md"))
 
         let registry = DocumentationRegistry(documents: [
-            "readme": .init(path: "Composed/README.md", sources: ["Fragments/a.md", "Fragments/missing.md"]),
+            "readme": .init(path: "Composed/README.md", sources: ["Fragments/a.md", "Fragments/missing.md"])
         ])
 
         let report = try DocumentationComposer().validate(registry: registry, sourceRoot: sourceRoot)
@@ -112,7 +112,7 @@ struct DocumentationComposerTests {
     func throwsForMissingSource() throws {
         let root = try TemporaryDirectory()
         let registry = DocumentationRegistry(documents: [
-            "readme": .init(path: "Composed/README.md", sources: ["missing.md"]),
+            "readme": .init(path: "Composed/README.md", sources: ["missing.md"])
         ])
 
         #expect(throws: DocumentationError.missingSource(documentID: "readme", source: "missing.md")) {
